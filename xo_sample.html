@@ -1,0 +1,262 @@
+<html>
+<head>
+<style>
+body{
+	background-repeat : no-repeat;
+	background-image : url(tictactoe.jpg);
+	background-size : cover;
+	background-attachment : fixed;
+	}
+</style>
+</head>
+<body>
+<marquee behavior="alternate" direction="right"><b><i><h1><font color="navy" style="font-family:chiller";>TIC TAC TOE</font></h1></i></b></marquee>
+<br><br>
+<center><p id="player">Player O go</p></center>
+<br><br>
+<font color="teal"><center><a id="ba"><button onclick="entera()" style="opacity:0.8";></button></a>		<a id="bb"><button onclick="enterb()" style="opacity:0.8";></button></a>		<a id="bc"><button onclick="enterc()" style="opacity:0.8";></button></a><br>
+<br><a id="bd"><button onclick="enterd()" style="opacity:0.8";></button></a>		<a id="be"><button onclick="entere()" style="opacity:0.8";></button></a>		<a id="bf"><button onclick="enterf()" style="opacity:0.8";></button></a><br>
+<br><a id="bg"><button onclick="enterg()" style="opacity:0.8";></button></a>		<a id="bh"><button onclick="enterh()" style="opacity:0.8";></button></a>		<a id="bi"><button onclick="enteri()" style="opacity:0.8";></button></a></center></font>
+<br><br>
+<center><button onclick="reload()" style="border-radius:12px";><b><h4><font color="sienna">RESTART</font></h4></b></button></center>
+<script>
+var i=1;
+var a=(i%2);
+var d1="",d2="",h1="",h2="",h3="",v1="",v2="",v3="";
+function entera(){
+	a=(i%2);
+	if(a==0){
+		document.getElementById("ba").innerHTML="  X  ";
+		v1=v1.concat("x");
+		h1=h1.concat("x");
+		d1=d1.concat("x");
+		i=i+1;
+		document.getElementById("player").innerHTML="Player O go";
+	}
+	
+	else{
+		document.getElementById("ba").innerHTML="  O  ";
+		d1=d1.concat("o");
+		h1=h1.concat("o");
+		v1=v1.concat("o");
+		i=i+1;
+		document.getElementById("player").innerHTML="Player X go";
+	}
+	if(v1=="xxx" || d1=="xxx" || h1=="xxx"){
+   		window.alert("Player X wins.Restart to play new game.");
+	}
+
+	else if(v1=="ooo" || d1=="ooo" || h1=="ooo"){
+		window.alert("Player O wins.Restart to play new game.");
+	}
+
+}
+function enterb(){
+	a=(i%2);
+	if(a==0){
+		document.getElementById("bb").innerHTML="  X  ";
+		v2=v2.concat("x");
+		h1=h1.concat("x");
+		i=i+1;
+		document.getElementById("player").innerHTML="Player O go";
+	}
+	
+	else{
+		document.getElementById("bb").innerHTML="  O  ";
+		v2=v2.concat("o");
+		h1=h1.concat("o");
+		i=i+1;
+		document.getElementById("player").innerHTML="Player X go";	
+	}
+	if(v2=="xxx" || h1=="xxx"){
+  		 window.alert("Player X wins.Restart to play new game.");
+	}
+	else if(v2=="ooo" || h1=="ooo"){
+		window.alert("Player O wins.Restart to play new game.");
+	}
+}
+function enterc(){
+	a=(i%2);
+	if(a==0){
+		document.getElementById("bc").innerHTML="  X  ";
+		d2=d2.concat("x");
+		h1=h1.concat("x");
+		v3=v3.concat("x");
+		i=i+1;
+		document.getElementById("player").innerHTML="Player O go";
+	}
+	
+	else{
+		document.getElementById("bc").innerHTML="  O  ";
+		d2=d2.concat("o");
+		h1=h1.concat("o");
+		v3=v3.concat("o");
+		i=i+1;
+		document.getElementById("player").innerHTML="Player X go";
+	}
+	if(v3=="xxx" || d2=="xxx" || h1=="xxx"){
+		window.alert("Player X wins.Restart to play new game.");
+	}
+	else if(v3=="ooo" || d2=="ooo" || h1=="ooo"){
+		window.alert("Player O wins.Restart to play new game.");
+	}
+}
+function enterd(){
+	a=(i%2);
+	if(a==0){
+		document.getElementById("bd").innerHTML="  X  ";
+		v1=v1.concat("x");
+		h2=h2.concat("x");
+		i=i+1;
+		document.getElementById("player").innerHTML="Player O go";
+	}
+	
+	else{
+		document.getElementById("bd").innerHTML="  O  ";
+		v1=v1.concat("o");
+		h2=h2.concat("o");
+		i=i+1;
+		document.getElementById("player").innerHTML="Player X go";
+	}
+	if(v1=="xxx" || h2=="xxx"){
+		window.alert("Player X wins.Restart to play new game.");
+	}
+	else if(v1=="ooo" || h2=="ooo"){
+		window.alert("Player O wins.Restart to play new game.");
+	}
+
+}
+function entere(){
+	a=(i%2);
+	if(a==0){
+		document.getElementById("be").innerHTML="  X  ";
+		v2=v2.concat("x");
+		h2=h2.concat("x");
+		d2=d2.concat("x");
+		d1=d1.concat("x");
+		i=i+1;
+		document.getElementById("player").innerHTML="Player O go";
+	}
+	
+	else{
+		document.getElementById("be").innerHTML="  O  ";
+		v2=v2.concat("o");
+		h2=h2.concat("o");
+		d2=d2.concat("o");
+		d1=d1.concat("o");
+		i=i+1;
+		document.getElementById("player").innerHTML="Player X go";
+	}
+	if(v2=="xxx" || d2=="xxx" || d1=="xxx" || h2=="xxx"){
+		window.alert("Player X wins.Restart to play new game.");
+	}
+	else if(v2=="ooo" || d2=="ooo" || d1=="ooo" || h2=="ooo"){
+		window.alert("Player O wins.Restart to play new game.");
+	}
+}
+function enterf(){
+	a=(i%2);
+	if(a==0){
+		document.getElementById("bf").innerHTML="  X  ";
+		v3=v3.concat("x");
+		h2=h2.concat("x");
+		i=i+1;
+		document.getElementById("player").innerHTML="Player O go";
+	}
+	
+	else{
+		document.getElementById("bf").innerHTML="  O  ";
+		v3=v3.concat("o");
+		h2=h2.concat("o");
+		i=i+1;
+		document.getElementById("player").innerHTML="Player X go";
+	}
+	if(v3=="xxx" || h2=="xxx"){
+		 window.alert("Player X wins.Restart to play new game.");
+	}
+	else if(v3=="ooo" || h2=="ooo"){
+		window.alert("Player O wins.Restart to play new game.");
+	}
+}
+function enterg(){
+	a=(i%2);
+	if(a==0){
+		document.getElementById("bg").innerHTML="  X  ";
+		v1=v1.concat("x");
+		h3=h3.concat("x");
+		d2=d2.concat("x");
+		i=i+1;
+		document.getElementById("player").innerHTML="Player O go";
+	}
+	
+	else{
+		document.getElementById("bg").innerHTML="  O  ";
+		v1=v1.concat("o");
+		h3=h3.concat("o");
+		d2=d2.concat("o");
+		i=i+1;
+		document.getElementById("player").innerHTML="Player X go";
+	}
+	if(v1=="xxx" || d2=="xxx" || h3=="xxx"){
+		window.alert("Player X wins.Restart to play new game.");
+	}
+	else if(v1=="ooo" || d2=="ooo" || h3=="ooo"){
+		 window.alert("Player O wins.Restart to play new game.");
+	}
+}
+function enterh(){
+	a=(i%2);
+	if(a==0){
+		document.getElementById("bh").innerHTML="  X  ";
+		v2=v2.concat("x");
+		h3=h3.concat("x");
+		i=i+1;
+		document.getElementById("player").innerHTML="Player O go";
+	}
+	
+	else{
+		document.getElementById("bh").innerHTML="  O  ";
+		v2=v2.concat("o");
+		h3=h3.concat("o");
+		i=i+1;
+		document.getElementById("player").innerHTML="Player X go";
+	}
+	if(v2=="xxx" || h3=="xxx"){
+		window.alert("Player X wins.Restart to play new game.");
+	}
+	else if(v2=="ooo" || h3=="ooo"){
+		window.alert("Player O wins.Restart to play new game.");
+	}
+}
+function enteri(){
+	a=(i%2);
+	if(a==0){
+		document.getElementById("bi").innerHTML="  X  ";
+		v3=v3.concat("x");
+		h3=h3.concat("x");
+		d1=d1.concat("x");
+		i=i+1;
+		document.getElementById("player").innerHTML="Player O go";
+	}
+	
+	else{
+		document.getElementById("bi").innerHTML="  O  ";
+		v3=v3.concat("o");
+		h3=h3.concat("o");
+		d1=d1.concat("o");	
+		i=i+1;
+		document.getElementById("player").innerHTML="Player X go";
+	}
+	if(v3=="xxx" || d1=="xxx" || h3=="xxx"){
+		window.alert("Player X wins.Restart to play new game.");
+	}
+	else if(v3=="ooo" || d1=="ooo" || h3=="ooo"){
+		window.alert("Player O wins.Restart to play new game.");
+	}
+}
+function reload(){
+	location.reload();
+}
+</script>
+</body>
+</html>
